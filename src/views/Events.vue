@@ -28,14 +28,14 @@ export default {
   methods: {
     getEventPicture (event) {
       if (event.concert === true) {
-        return require('../assets/male.png')
+        return require('../assets/concert.png')
       } else if (event.concert === false) {
-        return require('../assets/female.png')
+        return require('../assets/manchester.png')
       }
     }
   },
   mounted () {
-    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/persons'
+    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/events'
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
