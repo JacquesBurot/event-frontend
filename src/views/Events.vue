@@ -42,8 +42,8 @@ export default {
     }
     fetch(endpoint, requestOptions)
       .then(response => response.json())
-      .then(result => result.forEach(person => {
-        this.events.push(person)
+      .then(result => result.forEach(event => {
+        this.events.push(event)
       }))
       .catch(error => console.log('error', error))
   }
