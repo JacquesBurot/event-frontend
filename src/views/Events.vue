@@ -1,5 +1,5 @@
 <template>
-  <h1>Welcome to Events</h1>
+  <h1 style="color: #FF6F61">Welcome to Events</h1>
   <div class="container-fluid">
     <div class="row row-cols-1 row-cols-md-4 g-4">
       <div class="col" v-for="event in events" :key="event.id">
