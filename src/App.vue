@@ -19,15 +19,20 @@
 }
 
 #nav {
-  padding: 30px;
+  padding: 15px;
 }
 
 #nav a {
-  font-weight: bold;
-  color: #FF6F61;
+  background-color: ; /* Green */
+  border: none;
+  color: darkred;
+  padding: 20px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
 #nav a.router-link-exact-active {
-  color: #FF6F61
+  color: darkred;
 }
 </style>
