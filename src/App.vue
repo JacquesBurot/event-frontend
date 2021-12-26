@@ -19,17 +19,17 @@
 }
 
 #nav {
-  padding: 15px;
+  padding: 10px;
 }
 
 #nav a {
-  background-color: ; /* Green */
+   /* Green */
   border: none;
   color: darkred;
   padding: 20px 32px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  text-decoration: aliceblue;
+
 }
 
 #nav a.router-link-exact-active {
