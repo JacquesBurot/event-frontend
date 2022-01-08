@@ -3,7 +3,7 @@
   <section data-description="Super contrast">
     <div class="wrapper">
       <h1 class="delta uppercase thin raleway color-emphasis-2 ls-medium">
-        Create your own private<br>
+        Create your own<br>
         <span class="supersize montserrat bold">Event</span>
       </h1>
     </div>

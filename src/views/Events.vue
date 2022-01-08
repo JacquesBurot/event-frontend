@@ -8,7 +8,10 @@
           <div class="card-body">
             <h5 class="card-title">{{ event.eventName }} </h5>
             <p class="card-text">
-              {{ event.eventName }}  ist {{ event.zweiG ? '2G' : '3G' }}
+              You {{ event.zweiG ? 'got to be vaccinated or recovered to participate in' : 'got to be vaccinated, recovered or tested to participate in' }} {{ event.eventName }}
+            </p>
+            <p class="card-text">
+              The Event takes place at {{event.straße}} {{event.hausnmr}}, {{event.postleitzahl}} {{event.stadt}}
             </p>
           </div>
         </div>
