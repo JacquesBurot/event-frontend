@@ -1,6 +1,6 @@
 <template>
 
-  <section data-description="Super contrast">
+  <section data-description="">
     <div class="wrapper">
       <h1 class="delta uppercase thin raleway color-emphasis-2 ls-medium">
         Create your own<br>

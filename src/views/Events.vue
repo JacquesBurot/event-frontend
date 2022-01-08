@@ -1,18 +1,23 @@
 <template>
   <h1 style="color: darkred">Events</h1>
   <div class="container-fluid">
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-      <div class="col" v-for="event in events" :key="event.id">
-        <div class="card h-100">
-          <img :src="getEventPicture(event)" class="card-img-top" :alt="event.eventName">
-          <div class="card-body">
-            <h5 class="card-title">{{ event.eventName }} </h5>
-            <p class="card-text">
-              You {{ event.zweiG ? 'got to be vaccinated or recovered to participate in' : 'got to be vaccinated, recovered or tested to participate in' }} {{ event.eventName }}
-            </p>
-            <p class="card-text">
-              The Event takes place at {{event.straße}} {{event.hausnmr}}, {{event.postleitzahl}} {{event.stadt}}
-            </p>
+    <div class="class border-danger mb-3">
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col" v-for="event in events" :key="event.id">
+          <div class="card h-100">
+            <img :src="getEventPicture(event)" class="card-img-top" :alt="event.eventName">
+            <div class="card-body">
+              <h5 style="color: darkred" class="card-title">{{ event.eventName }}<br>
+                <h6 style="color: darkred" class="card-subtitle">{{event.straße}} {{event.hausnmr}}, {{event.postleitzahl}} {{event.stadt}}<br>
+                {{event.uhrzeit}}<br>
+                  <br>
+                  Music will be played by {{event.djName}}
+               </h6>
+             </h5>
+              <p style="color: darkred" class="card-text">
+               You {{ event.zweiG ? 'got to be vaccinated or recovered to participate in' : 'got to be vaccinated, recovered or tested to participate in' }} {{ event.eventName }}
+             </p>
+            </div>
           </div>
         </div>
       </div>
