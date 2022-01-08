@@ -15,8 +15,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: white;
+  color: darkred;
   background-color:  black;
+}
+html{
+  background : black;
+}
+hr{
+  background-color : darkred;
+  height : 1px;
+  border : none;
 }
 
 #nav {

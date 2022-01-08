@@ -7,13 +7,13 @@
           <div class="card h-100">
             <img :src="getEventPicture(event)" class="card-img-top" :alt="event.eventName">
             <div class="card-body">
-              <h5 style="color: darkred" class="card-title">{{ event.eventName }}<br>
-                <h6 style="color: darkred" class="card-subtitle">{{event.straße}} {{event.hausnmr}}, {{event.postleitzahl}} {{event.stadt}}<br>
+              <h2 style="color: darkred" class="card-title">{{ event.eventName }}<br>
+                <h5 style="color: darkred" class="card-subtitle">{{event.straße}} {{event.hausnmr}}, {{event.postleitzahl}} {{event.stadt}}<br>
                 {{event.uhrzeit}}<br>
                   <br>
                   Music will be played by {{event.djName}}
-               </h6>
-             </h5>
+               </h5>
+             </h2>
               <p style="color: darkred" class="card-text">
                You {{ event.zweiG ? 'got to be vaccinated or recovered to participate in' : 'got to be vaccinated, recovered or tested to participate in' }} {{ event.eventName }}
              </p>
