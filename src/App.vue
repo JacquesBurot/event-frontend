@@ -5,6 +5,7 @@
     <router-link to="/events">Events</router-link>
     <router-link to="/create">Create</router-link>
   </div>
+  <hr>
   <router-view/>
 </template>
 

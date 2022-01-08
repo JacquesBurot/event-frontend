@@ -17,6 +17,7 @@
               <p style="color: darkred" class="card-text">
                You {{ event.zweiG ? 'got to be vaccinated or recovered to participate in' : 'got to be vaccinated, recovered or tested to participate in' }} {{ event.eventName }}
              </p>
+              <hr>
             </div>
           </div>
         </div>
