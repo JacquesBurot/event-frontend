@@ -3,8 +3,8 @@
   <section data-description="">
     <div class="wrapper">
       <h1 class="delta uppercase thin raleway color-emphasis-2 ls-medium">
-        Create, publish and generate traffic for your next<br>
-        <span class="supersize montserrat bold">Event</span>
+        Create, publish and generate traffic for your next Event<br>
+        <span class="supersize montserrat bold">beatxlab</span>
       </h1>
     </div>
   </section>
