@@ -4,23 +4,33 @@
     <form>
       <div class="row">
         <div class="col-sm-10">
-         <input type="text" class="eventname" placeholder="Event name" v-model="eventName">
-         <input type="text" class="djname" placeholder="Dj name" v-model="djName">
-         <br>
-         <input type="text" class="strasse" placeholder="Straße" v-model="straße">
+          <div>
+            <input type="text" class="eventname" placeholder="Event name" v-model="eventName" required>
+            <input type="text" class="djname" placeholder="Dj name" v-model="djName" required>
+          </div>
           <br>
-          <input type="text" class="hausnummer" placeholder="Hausnummer" v-model="hausnummer">
-          <br>
-          <input type="text" class="stadt" placeholder="Stadt" v-model="stadt">
-         <input type="text" class="plz" placeholder="PLZ" v-model="postleitzahl">
+          <div>
+            <input type="text" class="strasse" placeholder="Straße" v-model="straße" required>
+          </div>
+          <div>
+            <input type="text" class="hausnummer" placeholder="Hausnummer" v-model="hausnummer" required>
+          </div>
+          <div>
+            <input type="text" class="stadt" placeholder="Stadt" v-model="stadt" required>
+            <input type="text" class="plz" placeholder="PLZ" v-model="postleitzahl">
+          </div>
          <br>
-         <input type="text" class="datum" placeholder="Datum" v-model="datum">
-         <input type="text" class="uhrzeit" placeholder="Uhrzeit" v-model="uhrzeit">
+          <div>
+            <input type="text" class="datum" placeholder="Datum" v-model="datum" required>
+            <input type="text" class="uhrzeit" placeholder="Uhrzeit" v-model="uhrzeit" required>
+          </div>
          <br>
-         <input type="text" class="promolink" placeholder="Promolink (Soundclound Einbettung)" v-model="promolink">
+          <div>
+            <input type="text" class="promolink" placeholder="Promolink (Soundclound Einbettung) (optional)" v-model="promolink">
+          </div>
         </div>
        <div class="vaccinated">
-         <input class="form-check-input" type="checkbox" id="zweiG" v-model="concert">
+         <input class="form-check-input" type="checkbox" id="zweiG" v-model="zweiG">
           <label class="form-check-label" for="zweiG">
            2G Pflicht
           </label>
@@ -33,7 +43,7 @@
        </div>
         <div class="buttons">
           <button type="submit" class="create" @click.prevent="createEvent">Create</button>
-         <button type="submit" class="reset">Reset</button>
+         <button type="reset" class="reset">Reset</button>
        </div>
       </div>
     </form>
@@ -110,6 +120,7 @@ export default {
 html {
   box-sizing: border-box;
 }
+
 .create{
   position: relative;
   bottom: -90px;
