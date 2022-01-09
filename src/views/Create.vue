@@ -121,9 +121,9 @@ html {
 
 .create{
   position: relative;
-  bottom: -90px;
+  bottom: -60px;
   left: -0.2em;
-  height: 40px;
+  height: 30px;
   width: 100px;
   background-color: indianred;
   border-radius: 7px;
@@ -131,9 +131,9 @@ html {
 
 .reset{
   position: relative;
-  bottom: -90px;
+  bottom: -60px;
   right: -0.2em;
-  height: 40px;
+  height: 30px;
   width: 100px;
   border-radius: 7px;
 }
@@ -157,6 +157,7 @@ html {
   height: 35px;
   width: 800px;
   border-radius: 7px;
+  background-color: #33383b;
 }
 .datum{
   position: relative;
@@ -164,6 +165,7 @@ html {
   left: -1em;
   height: 35px;
   border-radius: 7px;
+  background-color: #33383b;
 }
 .uhrzeit{
   position: relative;
@@ -171,6 +173,7 @@ html {
   right: -1em;
   height: 35px;
   border-radius: 7px;
+  background-color: #33383b;
 }
 .stadt{
   position: relative;
@@ -179,6 +182,7 @@ html {
   height: 35px;
   width: 300px;
   border-radius: 7px;
+  background-color: #33383b;
 }
 .plz{
   position: relative;
@@ -187,6 +191,8 @@ html {
   height: 35px;
   width: 300px;
   border-radius: 7px;
+  background-color: #33383b;
+  background-color: #33383b;
 }
 .hausnummer{
   position: relative;
@@ -194,6 +200,7 @@ html {
   height: 35px;
   width: 90px;
   border-radius: 7px;
+  background-color: #33383b;
 }
 .strasse{
   position: relative;
@@ -201,6 +208,7 @@ html {
   width: 500px;
   height: 35px;
   border-radius: 7px;
+  background-color: #33383b;
 }
 .eventname{
   position: relative;
@@ -208,6 +216,7 @@ html {
   width: 400px;
   height: 35px;
   border-radius: 7px;
+  background-color: #33383b;
 }
 .djname{
   position: relative;
@@ -215,6 +224,7 @@ html {
   width: 400px;
   height: 35px;
   border-radius: 7px;
+  background-color: #33383b;
 }
 *, *:before, *:after {
   box-sizing: inherit;
