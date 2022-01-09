@@ -90,6 +90,7 @@ export default {
         return null
       }
     },
+    emits: ['created'],
     async createEvent () {
       const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/events'
       const headers = new Headers()
