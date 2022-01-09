@@ -17,6 +17,7 @@
               <p style="color: darkred" class="card-text">
                You {{ event.zweiG ? 'got to be vaccinated or recovered to participate in' : 'got to be vaccinated, recovered or tested to participate in' }} {{ event.eventName }}
              </p>
+              <iframe v-if="validateSoundcloudUrl(event.promolink)" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" :src="event.promolink"></iframe>
               <hr>
             </div>
           </div>
@@ -41,6 +42,9 @@ export default {
       } else if (event.concert === false) {
         return require('../assets/manchester.png')
       }
+    },
+    validateSoundcloudUrl (url) {
+      return url !== null && url !== '' && url.indexOf('https://w.soundcloud.com/player/') !== -1
     }
   },
   mounted () {

@@ -20,19 +20,19 @@
          <input type="text" class="promolink" placeholder="Promolink (Soundclound Einbettung)" v-model="promolink">
         </div>
        <div class="vaccinated">
-         <input class="form-check-input" type="checkbox" id="gridCheck" v-model="zweiG">
-          <label class="form-check-label" for="gridCheck">
+         <input class="form-check-input" type="checkbox" id="zweiG" v-model="concert">
+          <label class="form-check-label" for="zweiG">
            2G Pflicht
           </label>
         </div>
         <div class="concert">
-          <input class="form-check-input" type="checkbox" id="gridCheck1" v-model="concert">
-         <label class="form-check-label" for="gridCheck">
+          <input class="form-check-input" type="checkbox" id="concert" v-model="concert">
+         <label class="form-check-label" for="concert">
            Es ist ein Konzert
           </label>
        </div>
         <div class="buttons">
-          <button type="submit" class="create" @click="createEvent">Create</button>
+          <button type="submit" class="create" @click.prevent="createEvent">Create</button>
          <button type="submit" class="reset">Reset</button>
        </div>
       </div>
@@ -61,11 +61,22 @@ export default {
     }
   },
   methods: {
+    extractLink () {
+      const regex = /(?<=src=")[^<>]+(?=")/gm
+      const match = regex.exec(this.promolink)
+      if (match) {
+        return match[0]
+      } else {
+        // Something went wrong while extracting the link.
+        // Don't send request to backend and tell user to copy the link again
+        return null
+      }
+    },
     createEvent () {
       const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/events'
       const headers = new Headers()
       headers.append('Content-Type', 'application/json')
-
+      const extractedLink = this.extractLink()
       const payload = JSON.stringify({
         eventName: this.eventName,
         concert: this.concert,
@@ -77,7 +88,7 @@ export default {
         hausnmr: this.hausnummer,
         uhrzeit: this.uhrzeit,
         datum: this.datum,
-        promolink: this.promolink
+        promolink: extractedLink
       })
 
       var requestOptions = {
@@ -119,15 +130,17 @@ html {
 }
 .concert{
   position: relative;
-  bottom: -30px;
+  bottom: -60px;
   right: -8em;
   border-radius: 7px;
+  display: inline;
 }
 .vaccinated{
   position: relative;
   bottom: -60px;
   left: -8em;
   border-radius: 7px;
+  display: inline;
 }
 .promolink{
   position: relative;
