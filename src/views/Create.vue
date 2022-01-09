@@ -31,13 +31,13 @@
         </div>
        <div class="vaccinated">
          <input class="form-check-input" type="checkbox" id="zweiG" v-model="zweiG">
-          <label class="form-check-label" for="zweiG">
+          <label style="color: black" class="form-check-label" for="zweiG">
            2G Pflicht
           </label>
         </div>
         <div class="concert">
           <input class="form-check-input" type="checkbox" id="concert" v-model="concert">
-         <label class="form-check-label" for="concert">
+         <label style="color: black" class="form-check-label" for="concert">
            Es ist ein Konzert
           </label>
        </div>
@@ -77,8 +77,6 @@ export default {
       if (match) {
         return match[0]
       } else {
-        // Something went wrong while extracting the link.
-        // Don't send request to backend and tell user to copy the link again
         return null
       }
     },
