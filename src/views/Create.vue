@@ -45,6 +45,15 @@
           <button type="submit" class="create" @click.prevent="createEvent">Create</button>
          <button type="reset" class="reset">Reset</button>
        </div>
+        <br>
+        <br>
+        <div v-if="this.serverValidationMessages">
+          <ul>
+            <li v-for="(message, index) in serverValidationMessages" :key="index" style="color: blueviolet">
+              {{ message }}
+            </li>
+          </ul>
+        </div>
       </div>
     </form>
     <div class="wrapper">
@@ -67,7 +76,8 @@ export default {
       datum: '',
       promolink: '',
       zweiG: false,
-      concert: false
+      concert: false,
+      serverValidationMessages: []
     }
   },
   methods: {
@@ -80,7 +90,7 @@ export default {
         return null
       }
     },
-    createEvent () {
+    async createEvent () {
       const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/events'
       const headers = new Headers()
       headers.append('Content-Type', 'application/json')
@@ -106,8 +116,21 @@ export default {
         redirect: 'follow'
       }
 
-      fetch(endpoint, requestOptions)
-        .catch(error => console.log('error', error))
+      const response = await fetch(endpoint, requestOptions)
+      await this.handleResponse(response)
+    },
+    async handleResponse (response) {
+      if (response.ok) {
+        this.$emit('created', response.headers.get('location'))
+        document.getElementById('close-offcanvas').click()
+      } else if (response.status === 400) {
+        response = await response.json()
+        response.errors.forEach(error => {
+          this.serverValidationMessages.push(error.defaultMessage)
+        })
+      } else {
+        this.serverValidationMessages.push('Unknown error occurred')
+      }
     }
   }
 }
