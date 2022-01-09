@@ -334,7 +334,7 @@ section:before{
 }
 
 /* Media queries */
-@media screen and (min-width: 1440px) {
-  section{height:700px}
+@media screen and (min-width: 2000px) {
+  section{height:1000px}
 }
 </style>
