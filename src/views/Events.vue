@@ -38,7 +38,7 @@ export default {
   methods: {
     getEventPicture (event) {
       if (event.concert === true) {
-        return require('../assets/concert.png')
+        return require('../assets/concert1.png')
       } else if (event.concert === false) {
         return require('../assets/manchester.png')
       }
